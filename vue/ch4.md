@@ -655,3 +655,59 @@
 
 </html>
 ```
+# 0416
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Vue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+</head>
+
+<body>
+
+  <div id="app">
+	<div class="country-item" v-for="(item, key) in countries" : key="key">
+		<h2> {{item.statename}} States:</h2>
+		<p v-for="(state ,i ) in item.states" :key="i">{{state.name}}</p>
+  </div>
+	</div>
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <script>
+    const vm = Vue.createApp({
+      data: () => {
+        return {
+		countries:[
+		{
+          statename: "UK",
+		  states:[{
+			name: "London",
+			lowerCaseName: "london"
+			},
+			{
+			name:"Scotland",
+			lowerCaseName:"scotland"
+			}]
+		  },
+		  
+		  {
+		  statename:"India",
+		  states:[{
+			name:"Madhya Pradesh",
+			lowerCaseName:"madhya-pradesh"
+			}]
+		  }
+		]
+		}}
+    }).mount('#app');
+  </script>
+
+</body>
+
+</html>
+```
