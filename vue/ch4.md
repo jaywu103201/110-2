@@ -711,3 +711,52 @@
 
 </html>
 ```
+# 0418
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Vue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+</head>
+
+<body>
+
+  <div id='testfunction' class="bg-dark">
+		<span v-html="globalFun2">
+		</span>
+		<button v-on:click='randFun'>refresh</button>
+  </div>
+	</div>
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <script>
+    const appFumction = Vue.createApp({
+      data:()=>{
+        return {
+				globalFun1:'Hi, Fun1!',
+				globalFun2:'<h2>Hi, Fun2! </h2>',
+				textFun:''
+				}
+			},
+			methods:{
+				randFun(){
+				const rand = Math.random();
+				if(rand <= 0.5){
+					alert(this.globalFun1)
+					}else{
+					alert(this.globalFun2);
+					}
+				}
+		}
+    }).mount('#testfunction');
+  </script>
+
+</body>
+
+</html>
+```
