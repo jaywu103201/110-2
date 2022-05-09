@@ -261,3 +261,85 @@
 
 </html>
 ```
+# 0506
+
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Vue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <style>
+    #app {
+      display: block;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+
+    .wrap {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+
+    .todo-lists,
+    .done-lists {
+      display: block;
+      max-width: 150px;
+      width: 45%;
+      height: 120px;
+      margin-right: 4%;
+      float: left;
+      border: 1px solid #ccc;
+      padding: 1rem;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app">
+	  <div id="app">
+	<ul class="pagination">
+	<li class="page-item" v-for="(page,key) in arr">
+		<a class="page"> {{page}} </a>
+	</li>
+
+	</ul>
+  </div>
+  </div>
+  
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const vm = Vue.createApp({
+		data(){
+			return {
+			arr:{
+				1:'Information Engineering Dept',
+				2:'-----------',
+				3:'Mechanical Engineering Dept',
+				4:'-----------',
+				5:'Information Manaagement Dept',
+				6:'-----------',
+			}
+		}
+	},
+	}).mount('#app');
+  </script>
+
+</body>
+
+</html>
+```
