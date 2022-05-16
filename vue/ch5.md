@@ -384,7 +384,7 @@
 
 </html>
 ```
-# 0510
+# 0510divfor
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -404,6 +404,49 @@
 		<li> {{ key }}_{{ val }}</li>
 	</ul>
 		<span>+{{ key }}_{{ val }}	</span>
+  </div>
+ 
+  
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const vm = Vue.createApp({
+		data(){
+			return {
+			book:{
+				id:'08js',
+				text:'kuro',
+				publishedat:'2019/09'
+			}
+		}
+	}
+	}).mount('#app');
+  </script>
+
+</body>
+
+</html>
+```
+# 0511template
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Vue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+
+  <div id="app">
+	<template v-for="(val, key) in book">
+	<ul>
+		<li> {{ key }}_{{ val }}</li>
+	</ul>
+		<span>+{{ key }}_{{ val }}	</span>
+	</template>
   </div>
  
   
