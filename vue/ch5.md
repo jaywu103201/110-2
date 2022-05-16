@@ -343,3 +343,44 @@
 
 </html>
 ```
+# 0509
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello Vue</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+
+  <div id="app">
+	<ul>
+		<li v-for="(val, key) in book">{{ key }}_{{ val }}</li>
+	</ul>
+		<span v-for="(val, key) in book">+{{ key }}_{{ val }}	</span>
+  </div>
+ 
+  
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+    const vm = Vue.createApp({
+		data(){
+			return {
+			book:{
+				id:'08js',
+				text:'kuro',
+				publishedat:'2019/09'
+			}
+		}
+	}
+	}).mount('#app');
+  </script>
+
+</body>
+
+</html>
+```
